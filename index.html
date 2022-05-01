@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body class="main-content">
 
@@ -26,7 +27,7 @@
         <button class="control control-3" aria-label="Portfolio"  data-id="portfolio">
             <i class="fas fa-briefcase"></i>
         </button>
-        <button class="control control-4" aria-label="Blogs"  data-id="blogs">
+        <button class="control control-4" aria-label="Blogs"  data-id="blog">
             <i class="far fa-newspaper"></i>
         </button>
         <button class="control control-5" aria-label="Contact" data-id="contact">
@@ -34,7 +35,7 @@
         </button>
     </nav>
  
-    <header class="section sec1 header active" id="home">
+    <!-- <header class="section sec1 header active" id="home">
         <div class="header-content">
             <div class="left-header">
                 <div class="h-shape"></div>
@@ -60,11 +61,11 @@
                 </div>
             </article>
         </div>
-    </header>
+    </header> -->
 
     
     <main>
-        <section class="section sec2 about" id="about">
+        <!-- <section class="section sec2 about" id="about">
             <div class="main-title">
                 <h2>qui est-<span>elle ??</span><span class="bg-text">Quelques chiffres</span></h2>
             </div>
@@ -341,7 +342,7 @@
                     </article>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="section sec3" id="portfolio">
             <div class="main-title">
@@ -351,7 +352,7 @@
                 Here is some of my work that I've done in various programming languages.
             </p>
             <div class="portfolios">
-                <div class="portfolio-item">
+                <!-- <div class="portfolio-item">
                     <div class="image">
                         <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
                     </div>
@@ -464,13 +465,13 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="portfolio-item">
                     <div class="image">
-                        <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+                        <img src="./img/portfolio/2.png" alt="">
                     </div>
                     <div class="hover-items">
-                        <h3>Project Source</h3>
+                        <h3>Template site vitrine</h3>
                         <div class="icons">
                             <a href="#" class="icon">
                                 <i class="fab fa-github"></i>
@@ -478,22 +479,47 @@
                             <a href="#" class="icon">
                                 <i class="fab fa-behance"></i>
                             </a>
-                            <a href="#" class="icon">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+                            <button type="button" aria-haspopup="dialog" aria-controls="project1" class="icon">
+                                <i class="fa fa-image"></i>
+                            </button>
+                        </div>
+                        
+                    </div>
+                    <div id="project1" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+                        <div role="document" class="c-dialog__box">
+                          <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="project1">
+                              <i class="fa fa-times"></i>
+                          </button>
+                          <h2 id="dialog-title">Template de site vitrine</h2>
+                          <p id="dialog-desc">Template réaliser en HTML et CSS entièrement adapter à toutes tailles d'écrans (smartphone -> grand écran)</p>
+                          <img src="./img/portfolio/2.png" alt="">
+                          
+                          <!-- <form action="" method="post">
+                            <p>
+                              <label for="email">Email</label><br />
+                              <input type="email" id="email" />
+                            </p>
+                            <p>
+                              <label for="password">Mot de passe</label><br />
+                              <input type="password" id="password" />
+                            </p>
+                            <p>
+                              <button type="submit">Valider</button>
+                            </p>
+                          </form> -->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section sec4 " id="blogs">
+        <section class="section sec4 " id="blog">
             <div class="blogs-content">
                 <div class="main-title">
                     <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
                 </div>
                 <div class="blogs">
-                    <div class="blog">
+                    <!-- <div class="blog">
                         <img src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
                         <div class="blog-text">
                             <h4>
@@ -528,7 +554,7 @@
                                 Doloribus natus voluptas, eos obcaecati recusandae amet?
                             </p>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="blog">
                         <img src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
                         <div class="blog-text">
@@ -545,26 +571,126 @@
                         <img src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
                         <div class="blog-text">
                             <h4>
-                                Get started with Web Design and UI Design
+                                Ma formation Développeur Web / Web Mobile
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                Entrons en détails dans cette formation courte 3 mois et demi de développeur web / web mobile 
+                                suivi avec WebForce3...
                             </p>
+                            <button type="button" aria-haspopup="dialog" aria-controls="blog1">
+                                L'article complet ->
+                            </button>
+                        </div>
+                        <div id="blog1" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+                            <div role="document" class="c-dialog__box">
+                              <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="blog1">
+                                  <i class="fa fa-times"></i>
+                              </button>
+                              <h2 id="dialog-title">Ma reconversion professionnelle & mes débuts dans l'IT </h2>
+                              <p id="dialog-desc">Pour reprendre du début je ne viens pas du milieu de l'IT et je n'ai pas fait d'étude dans ce domaine,
+                                  je n'ai pas fait d'étude tout cours...
+                              </p>
+                              <img src="./img/blog/graduation.png" alt="">
+                              <p>
+                                  Pour commencer je n'ai pas fini le lycée, j'ai stoper mes études en 2nd Electrotechnique pourquoi avoir choisi cette
+                                   voie je ne sais pas, par influence peut-être... J'ai fait plusieurs ateliers et formations dans le domaine dans lequel je 
+                                   voulais partir après le collège : l'aide à la personne. Je voulais devenir aide soignante mais on m'avais dit que je ne 
+                                   réussirais jamais dans cette voie. J'ai décrocher mon premier emploi dans ce domaine en 2011 sur Lille dans un EHPAD, 
+                                   j'ai beaucoup aimer y travailler mais je n'ai pas été reconduit suite à ma crise d'appendicite. Après cela j'ai eu plusieurs contrats 
+                                   toujours dans l'aide à la personne jusqu'en 2013 ou je me suis blesser au dos ce qui a conduit à deux pincements discaux et 
+                                   de l'arthrose lombaire, j'ai malgré tout continuer dans cette voie quelques années après, j'ai passer un titre professionnel 
+                                   de niveau CAP/BEP en 2016 celui d'APH : Agent de Propreté et d'Hygiène ou j'ai appris le nettoyage/rénovation de sol via 
+                                   les machines (mono-brosse, auto-laveuse, injecteur/extracteur...) en 4 mois j'ai été diplômé (la fin de formation et le passage du diplôme
+                                   a été très compliquer, j'ai eu une période très dur moralement et psychologiquement je revindrais dessus dans un autre article) 
+                                   j'ai continuer quelques années puis j'ai passer la certification HACCP pour les normes de nettoyage dans le milieu de la restauration. 
+                              </p>
+                              <img src="./img/blog/graduation.png" alt="">
+                              
+                            </div>
                         </div>
                     </div>
                     <div class="blog">
                         <img src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" alt="">
                         <div class="blog-text">
                             <h4>
-                                This is what you need to know about Web Design
+                                Ma reconversion professionnelle & mes débuts dans l'IT 
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Doloribus natus voluptas, eos obcaecati recusandae amet?
+                                Cette reconversion un peut forcée qui fût compliquer à accepter, 
+                                elle fait suite à un nouvel accident du travail...
                             </p>
+                            <button type="button" aria-haspopup="dialog" aria-controls="blog0">
+                                L'article complet ->
+                            </button>
+                        </div>
+                        <div id="blog0" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
+                            <div role="document" class="c-dialog__box">
+                              <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="blog0">
+                                  <i class="fa fa-times"></i>
+                              </button>
+                              <h2 id="dialog-title">Ma reconversion professionnelle & mes débuts dans l'IT </h2>
+                              <p id="dialog-desc">Pour reprendre du début je ne viens pas du milieu de l'IT et je n'ai pas fait d'étude dans ce domaine,
+                                  je n'ai pas fait d'étude tout cours...
+                              </p>
+                              <img src="./img/blog/graduation.png" alt="">
+                              <p>
+                                  Pour commencer je n'ai pas fini le lycée, j'ai stoper mes études en 2nd Electrotechnique pourquoi avoir choisi cette
+                                   voie je ne sais pas, par influence peut-être... J'ai fait plusieurs ateliers et formations dans le domaine dans lequel je 
+                                   voulais partir après le collège : l'aide à la personne. Je voulais devenir aide soignante mais on m'avais dit que je ne 
+                                   réussirais jamais dans cette voie. J'ai décrocher mon premier emploi dans ce domaine en 2011 sur Lille dans un EHPAD, 
+                                   j'ai beaucoup aimer y travailler mais je n'ai pas été reconduit suite à ma crise d'appendicite. Après cela j'ai eu plusieurs contrats 
+                                   toujours dans l'aide à la personne jusqu'en 2013 ou je me suis blesser au dos ce qui a conduit à deux pincements discaux et 
+                                   de l'arthrose lombaire, j'ai malgré tout continuer dans cette voie quelques années après, j'ai passer un titre professionnel 
+                                   de niveau CAP/BEP en 2016 celui d'APH : Agent de Propreté et d'Hygiène ou j'ai appris le nettoyage/rénovation de sol via 
+                                   les machines (mono-brosse, auto-laveuse, injecteur/extracteur...) en 4 mois j'ai été diplômé (la fin de formation et le passage du diplôme
+                                   a été très compliquer, j'ai eu une période très dur moralement et psychologiquement je revindrais dessus dans un autre article) 
+                                   j'ai continuer quelques années puis j'ai passer la certification HACCP pour les normes de nettoyage dans le milieu de la restauration. 
+                              </p>
+                              <img src="./img/blog/graduation.png" alt="">
+                              <p>
+                                  J'étais sous contrat avec une grande chaîne de restauration rapide quand mon accident à l'épaule (une magnifique double
+                                  tendinite avec fissure d'un des deux tendons touchés, 6 mois de galère avant le début de ma rééducation mais malgré tout ce qui 
+                                  a été fait des séquelles sont présentes, perte de force, douleurs régulières, bras qui lâche...) l'accident a eu lieu en janvier 2019 depuis 
+                                  c'est une galère soit 3 ans après... En 2018 j'avais effectuer un atelier découverte des métiers du numérique j'avais pas poursuivi
+                                  car j'avais besoin de travailler et que contrat en restauration et arriver avant l'offre de formation dans l'IT... J'aurais du attendre
+                                  aujourd'hui je le regrette vraiment car mes douleurs au dos en continues et les séquelles à l'épaule sont vraiment gênantes/handicapantes.
+                              </p>
+                              <img src="./img/blog/graduation.png" alt="">
+                              <p>
+                                  En 2019 j'ai effectuée la formation de Développeur web / web mobile au centre WebForce3 de la Madeleine, une formation en condencée ou plusieurs
+                                  langages ont été "vu / survoler" sans réellement entrer en détails dans l'un d'eux. Le point positif c'est que j'ai pu affiner ma recherche
+                                  dans le domaine ou je voulais évoluer (partie web design et intégration web avec une spécialisation en JavaScript et ses frameworks). 
+                                  <img src="./img/blog/diploma.png" alt=""> En 
+                                  avril 2020 j'ai obtenue mon certificat CNCP d'intégrateur web, j'ai poursuivi avec une recherche en contrat d'apprentissage pour 
+                                  passer le titre professionnel de Développeur Web avec OpenClassrooms en 12 mois et ce fût un vrai fiasco de Sept 2020 à Août 2021... 
+                                  J'ai perdue une année, le manque d'un réel accompagnement par un chef d'équipe dispo quand on débute c'est un peu normal et des cours non mis 
+                                  à jours par rapport au projets pour la partie formation bref... 
+                                  J'ai mis en stand-by cette partie là je me suis rencentrer sur le web design et la recherche d'un nouveau poste, que j'ai obtenue pour janvier 2022
+                                  mais bon c'est pas le top j'ai appris et apprends des choses qui peut-être vont me servir à l'avenir (je l'espère en tout cas) et début avril 2022
+                                  j'ai signer un CDI avec une boîte de Paris ou je vais être en full-remote, j'appréhende beaucoup car ce nouveau départ professionnel 
+                                  vient avec des difficultés côté personnel qui me sont dur à gérer émotionnelement, psychologiquement et cela à des effets physiquement.
+                                  Je ne vais pas bien je remets tout en question je ne sais plus ce que je veux réellement je suis complètement perdue...
+                              </p>
+
+                              <!-- <img src="" alt=""> -->
+                              
+                              <!-- <form action="" method="post">
+                                <p>
+                                  <label for="email">Email</label><br />
+                                  <input type="email" id="email" />
+                                </p>
+                                <p>
+                                  <label for="password">Mot de passe</label><br />
+                                  <input type="password" id="password" />
+                                </p>
+                                <p>
+                                  <button type="submit">Valider</button>
+                                </p>
+                              </form> -->
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -614,7 +740,7 @@
                                     <span>C'est quoi son Numéro?</span>
                                 </div>
                                 <p>
-                                    <span>: (+33) 06 00 00 00 00</span>
+                                    <span>: (+33) 06 21 08 83 20</span>
                                 </p>
                             </div>
                             <div class="contact-item">
@@ -698,5 +824,6 @@
     </bouton>
 
     <script src="app.js"></script>
+    <script src="./script/modale.js"></script>
 </body>
 </html>

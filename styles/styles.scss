@@ -9,6 +9,7 @@
 :root{
     --color-primary: #000103;
     --color-secondary: #f6b05f;
+    --color-secondary-bis: rgba(246, 176, 95, .5);
     --color-reverse: #fff;
     --color-white: #FFFFFF;
     --color-black: #000;
@@ -27,6 +28,7 @@
 .light-mode{
     --color-primary: #FFFFFF;
     --color-secondary: #e40145;
+    --color-secondary-bis: rgba(228, 1, 69, .5);
     --color-reverse: #000;
     --color-white: #454e56;
     --color-black: #000;
@@ -471,7 +473,7 @@ section{
         border-radius: 15px;
         img{
             width: 100%;
-            height: 300px;
+            // height: 300px;
             object-fit: cover;
             border-radius: 15px;
             filter: grayscale(.7);
@@ -527,6 +529,45 @@ section{
                 }
             }
         }
+        .c-dialog {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            padding: 2.4rem;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            background: var(--color-secondary-bis);
+            transition: .2s;
+            .c-dialog__box {
+                flex: 1;
+                max-width: 70rem;
+                margin: auto;
+                padding: 2.4rem;
+                background-color: var(--color-primary);
+                
+                button {
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .fa-times {
+                        font-size: 1.5rem;
+                        padding: .5rem;
+                    }
+                }
+            }
+        }
+        .c-dialog[aria-hidden="true"] {
+            visibility: hidden;
+            opacity: 0;
+        }
     }
 }
 
@@ -548,16 +589,16 @@ section{
         border-radius: 5px;
         box-shadow: 1px 1px 20px rgba(0,0,0,.1);
         transition: all .4s ease-in-out;
-        &:hover{
-            box-shadow: 1px 1px 20px rgba(0,0,0,.3);
-            transform: translateY(-5px);
-            transition: all .4s ease-in-out;
-            img{
-                filter: grayscale(0);
-                transform: scale(1.1);
-                box-shadow: 0px 4px 15px rgba(0,0,0,0.8);
-            }
-        }
+        // &:hover{
+        //     box-shadow: 1px 1px 20px rgba(0,0,0,.3);
+        //     transform: translateY(-5px);
+        //     transition: all .4s ease-in-out;
+        //     img{
+        //         filter: grayscale(0);
+        //         // transform: scale(1.1);
+        //         box-shadow: 0px 4px 15px rgba(0,0,0,0.8);
+        //     }
+        // }
         img{
             width: 100%;
             height: 300px;
@@ -585,6 +626,45 @@ section{
                 line-height: 2rem;
                 padding-bottom: 1rem;
             }
+        }
+        .c-dialog {
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            padding: 2.4rem;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            background: var(--color-secondary-bis);
+            transition: .2s;
+            .c-dialog__box {
+                    flex: 1;
+                    max-width: 70rem;
+                    margin: auto;
+                    padding: 2.4rem;
+                    background-color: var(--color-primary);
+
+                    button {
+                        border-radius: 50%;
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        .fa-times {
+                            font-size: 1.5rem;
+                            padding: .5rem;
+                        }
+                    }
+                }
+        }
+        .c-dialog[aria-hidden="true"] {
+            visibility: hidden;
+            opacity: 0;
         }
     }
 }

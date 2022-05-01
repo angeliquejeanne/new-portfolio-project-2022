@@ -9,6 +9,7 @@
 :root {
   --color-primary: #000103;
   --color-secondary: #f6b05f;
+  --color-secondary-bis: rgba(246, 176, 95, .5);
   --color-reverse: #fff;
   --color-white: #FFFFFF;
   --color-black: #000;
@@ -27,6 +28,7 @@
 .light-mode {
   --color-primary: #FFFFFF;
   --color-secondary: #e40145;
+  --color-secondary-bis: rgba(228, 1, 69, .5);
   --color-reverse: #000;
   --color-white: #454e56;
   --color-black: #000;
@@ -629,7 +631,6 @@ section {
 
 .portfolios .portfolio-item img {
   width: 100%;
-  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
@@ -717,6 +718,59 @@ section {
   color: var(--color-primary);
 }
 
+.portfolios .portfolio-item .c-dialog {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.4rem;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: var(--color-secondary-bis);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.portfolios .portfolio-item .c-dialog .c-dialog__box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 70rem;
+  margin: auto;
+  padding: 2.4rem;
+  background-color: var(--color-primary);
+}
+
+.portfolios .portfolio-item .c-dialog .c-dialog__box button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolios .portfolio-item .c-dialog .c-dialog__box button .fa-times {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+
+.portfolios .portfolio-item .c-dialog[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .portfolio-item:hover .hover-items {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -741,24 +795,6 @@ section {
           box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-}
-
-.blogs .blog:hover {
-  -webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.blogs .blog:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
-          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 .blogs .blog img {
@@ -796,6 +832,59 @@ section {
   color: var(--color-grey-2);
   line-height: 2rem;
   padding-bottom: 1rem;
+}
+
+.blogs .blog .c-dialog {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.4rem;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  background: var(--color-secondary-bis);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.blogs .blog .c-dialog .c-dialog__box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 70rem;
+  margin: auto;
+  padding: 2.4rem;
+  background-color: var(--color-primary);
+}
+
+.blogs .blog .c-dialog .c-dialog__box button {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blogs .blog .c-dialog .c-dialog__box button .fa-times {
+  font-size: 1.5rem;
+  padding: .5rem;
+}
+
+.blogs .blog .c-dialog[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .contact-content-con {
