@@ -17,35 +17,46 @@
 </head>
 <body class="main-content">
 
-    <nav class="controlls"> 
-        <button class="control  control-1 active-btn" aria-label="Accueil" data-id="home" >
-            <i class="fas fa-home"></i>
-        </button>
-        <button class="control control-2" aria-label="Mon parcours"  data-id="about">
-            <i class="fas fa-user"></i>
-        </button>
-        <button class="control control-3" aria-label="Portfolio"  data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </button>
-        <button class="control control-4" aria-label="Blogs"  data-id="blog">
-            <i class="far fa-newspaper"></i>
-        </button>
-        <button class="control control-5" aria-label="Contact" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </button>
+    <nav class="controlls" role="navigation" aria-label="navigation principale"> 
+        <ul>
+            <button class="control  control-1 active-btn" data-id="home" title="Accueil">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span class="sr-only">Accueil</span>
+            </button>
+            <button class="control control-2" data-id="about">
+                <i class="fas fa-user" aria-hidden="true"></i>
+                <span class="sr-only">Mon parcours</span>
+            </button>
+            <button class="control control-3" data-id="portfolio">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <span class="sr-only">Portfolio</span>
+            </button>
+            <button class="control control-4" data-id="blog">
+                <i class="far fa-newspaper" aria-hidden="true"></i>
+                <span class="sr-only">Blogs</span>
+            </button>
+            <button class="control control-5" data-id="contact">
+                <i class="fas fa-envelope-open" aria-hidden="true"></i>
+                <span class="sr-only">Contact</span>
+            </button>
+        </ul>
     </nav>
  
     <header class="section sec1 header active" id="home">
-        <div class="header-content">
+        <article class="header-content">
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
                     <img src="./img/photo-1515138692129-197a2c608cfd.avif" aria-hidden="true" alt="">
                 </div>
             </div>
-            <article class="right-header">
-                <h1 class="name">
+            <section class="right-header">
+                <!-- <h1 class="name">
                     Salut, moi c'est <span>Angélique S.</span><br>
+                    Je suis Consultante Web
+                </h1> -->
+                <h1 class="name">
+                    Salut, moi c'est <span>Jane Doe</span><br>
                     Je suis Consultante Web
                 </h1>
                 <p>
@@ -60,8 +71,8 @@
                         <span class="btn-icon" aria-hidden="true"><i class="fas fa-download"></i></span>
                     </a>
                 </div>
-            </article>
-        </div>
+            </sect>
+        </article>
     </header>
 
     
@@ -72,7 +83,7 @@
             </div>
 
             <div class="about-container">
-                <div class="left-about">
+                <article class="left-about">
                     <h4>Informations sur elle...</h4>
                     <p>
                         Suite un atelier de découverte aux métiers du numérique, j'ai découvert
@@ -93,37 +104,37 @@
                             <span class="btn-icon"><i class="fas fa-download"></i></span>
                         </a>
                     </div>
-                </div>
+                </article>
 
                 <div class="right-about">
-                    <div class="about-item">
+                    <article class="about-item">
                         <div class="abt-text">
                             <p class="large-text">20+</p>
-                            <p class="small-text">Projets <br /> Completer</p>
+                            <h5 class="small-text">Projets <br /> Completer</h5>
                         </div>
-                    </div>
+                    </article>
                     <div class="about-item">
-                        <div class="abt-text">
+                        <article class="abt-text">
                             <p class="large-text">4+</p>
-                            <p class="small-text">Années d' <br /> expérience</p>
-                        </div>
+                            <h5 class="small-text">Années d' <br /> expérience</h5>
+                        </article>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
+                        <article class="abt-text">
                             <p class="large-text">5+</p>
-                            <p class="small-text">Clients <br /> contents</p>
-                        </div>
+                            <h5 class="small-text">Clients <br /> contents</h5>
+                        </article>
                     </div>
                     <div class="about-item">
-                        <div class="abt-text">
+                        <article class="abt-text">
                             <p class="large-text">5+</p>
-                            <p class="small-text">Avis <br /> clients</p>
-                        </div>
+                            <h5 class="small-text">Avis <br /> clients</h5>
+                        </article>
                     </div>
                 </div>
             </div>
 
-            <div class="about-stats">
+            <section class="about-stats">
                 <h3 class="stat-title">My Skills</h3>
                 <div class="progress-bars">
                     <div class="progress-bar">
@@ -217,7 +228,7 @@
                     </div>
 
                 </div>
-            </div>
+            </section>
 
             <h3 class="stat-title">My Timeline</h3>
             <div class="timeline">
@@ -319,10 +330,10 @@
                 </div>
                 <div class="timeline-item">
                     <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
+                        <i class="fas fa-briefcase hidden"></i>
                     </div>
-                    <p class="tl-duration">2016</p>
-                    <h5>Titre pro - APH<span> - Instep - Lille</span></h5>
+                    
+                    <h5><span class="tl-duration">2016</span> Titre pro - APH<span> - Instep - Lille</span></h5>
                     <p>
                         Titre professionnel RNCP de niv3 - BEP/CAP
                     </p>
@@ -484,7 +495,7 @@
                     <div class="image">
                         <img src="./img/portfolio/2.png" alt="">
                     </div>
-                    <div class="hover-items">
+                    <article class="hover-items" active focus>
                         <h3>Template site vitrine</h3>
                         <div class="icons">
                             <a href="#" class="icon">
@@ -498,7 +509,7 @@
                             </button>
                         </div>
                         
-                    </div>
+                    </article>
                     <div id="project1" role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc" aria-modal="true" aria-hidden="true" tabindex="-1" class="c-dialog">
                         <div role="document" class="c-dialog__box">
                           <button type="button" aria-label="Fermer" title="Fermer cette fenêtre modale" data-dismiss="project1">
@@ -834,8 +845,6 @@
         </section>
 
     </main>
-
-
 
     <bouton class="theme-btn">
         <i class="fas fa-adjust"></i>
