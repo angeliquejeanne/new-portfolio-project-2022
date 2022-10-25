@@ -9,7 +9,7 @@
 :root {
   --color-primary: #000103;
   --color-secondary: #f6b05f;
-  --color-secondary-bis: rgba(246, 176, 95, .5);
+  --color-secondary-bis: rgba(246, 176, 95, .4);
   --color-reverse: #fff;
   --color-white: #FFFFFF;
   --color-black: #000;
@@ -29,7 +29,7 @@
 .light-mode {
   --color-primary: #FFFFFF;
   --color-secondary: #e40145;
-  --color-secondary-bis: rgba(228, 1, 69, .5);
+  --color-secondary-bis: rgba(228, 1, 69, .4);
   --color-reverse: #000;
   --color-white: #454e56;
   --color-black: #000;
@@ -127,6 +127,7 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  margin: 2rem auto;
 }
 
 .sec3 {
@@ -399,6 +400,7 @@ section {
       grid-template-columns: repeat(2, 1fr);
   padding-top: 3.5rem;
   padding-bottom: 5rem;
+  margin: 2rem auto;
 }
 
 .about-container .right-about {
@@ -410,7 +412,7 @@ section {
 }
 
 .about-container .right-about .about-item {
-  border: 1px solid var(--color-grey-5);
+  border: 3px solid var(--color-grey-1);
   border-radius: 5px;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -418,17 +420,12 @@ section {
           box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.about-container .right-about .about-item:hover {
-  cursor: default;
+.about-container .right-about .about-item:hover, .about-container .right-about .about-item:focus, .about-container .right-about .about-item:active {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  border: 1px solid var(--color-secondary);
+  border: 3px solid var(--color-secondary);
   -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
           box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
-}
-
-.about-container .right-about .about-item:focus {
-  outline: 1px solid var(--color-secondary);
 }
 
 .about-container .right-about .about-item .abt-text {
@@ -437,9 +434,12 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
+  min-height: auto;
+  width: 100%;
 }
 
 .about-container .right-about .about-item .abt-text .large-text {
@@ -457,16 +457,6 @@ section {
   letter-spacing: 2px;
 }
 
-.about-container .right-about .about-item .abt-text .small-text::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 15px;
-  width: 2rem;
-  height: 2px;
-  background-color: var(--color-grey-5);
-}
-
 .about-container .left-about {
   padding-right: 3rem;
 }
@@ -477,9 +467,32 @@ section {
   color: var(--color-grey-1);
 }
 
-.about-container .left-about h4 {
-  font-size: 2rem;
+.about-container .left-about h3 {
+  font-size: 2.5rem;
   text-transform: uppercase;
+}
+
+.about-container .left-about .btn-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.about-container .left-about .btn-con .main-btn {
+  background-color: var(--color-icon);
+  outline: 2px solid var(--color-icon);
+}
+
+.about-container .left-about .btn-con .main-btn .text {
+  padding: 0 1rem;
+}
+
+.about-container .left-about .btn-con .main-btn:active, .about-container .left-about .btn-con .main-btn:focus, .about-container .left-about .btn-con .main-btn:hover {
+  outline: 2px solid var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-icon);
 }
 
 .about-stats {
@@ -1024,11 +1037,12 @@ section {
   transition: all .4s ease-in-out;
 }
 
-.contact-content-con .left-contact .contact-icon a:hover {
+.contact-content-con .left-contact .contact-icon a:hover, .contact-content-con .left-contact .contact-icon a:active, .contact-content-con .left-contact .contact-icon a:focus {
   background-color: var(--color-secondary);
+  outline: 2px solid var(--color-secondary);
 }
 
-.contact-content-con .left-contact .contact-icon a:hover i {
+.contact-content-con .left-contact .contact-icon a:hover i, .contact-content-con .left-contact .contact-icon a:active i, .contact-content-con .left-contact .contact-icon a:focus i {
   color: var(--color-primary);
 }
 
@@ -1069,12 +1083,12 @@ section {
 
 .contact-content-con .right-contact .input-control input, .contact-content-con .right-contact .input-control textarea {
   border-radius: 30px;
-  font-weight: inherit;
+  font-weight: 600;
   font-size: inherit;
   font-family: inherit;
   padding: .8rem 1.1rem;
   outline: none;
-  border: none;
+  border: 2px solid var(--color-secondary);
   background-color: var(--color-secondary-bis);
   width: 90%;
   resize: none;
@@ -1082,23 +1096,28 @@ section {
 }
 
 .contact-content-con .right-contact .input-control input::-webkit-input-placeholder, .contact-content-con .right-contact .input-control textarea::-webkit-input-placeholder {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-black);
+  font-weight: 700;
 }
 
 .contact-content-con .right-contact .input-control input:-ms-input-placeholder, .contact-content-con .right-contact .input-control textarea:-ms-input-placeholder {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-black);
+  font-weight: 700;
 }
 
 .contact-content-con .right-contact .input-control input::-ms-input-placeholder, .contact-content-con .right-contact .input-control textarea::-ms-input-placeholder {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-black);
+  font-weight: 700;
 }
 
 .contact-content-con .right-contact .input-control input::placeholder, .contact-content-con .right-contact .input-control textarea::placeholder {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.contact-content-con .right-contact .input-control input:active, .contact-content-con .right-contact .input-control input:focus, .contact-content-con .right-contact .input-control input:hover, .contact-content-con .right-contact .input-control textarea:active, .contact-content-con .right-contact .input-control textarea:focus, .contact-content-con .right-contact .input-control textarea:hover {
+  outline: 2px solid var(--color-secondary);
+  color: var(--color-icon);
 }
 
 .contact-content-con .right-contact .i-c-2 {
@@ -1329,9 +1348,21 @@ section {
   padding-left: 0;
 }
 
-@media screen and (maw-width: 450px) {
+@media screen and (max-width: 450px) {
   .left-header {
     display: none;
+  }
+  section .main-title h2 {
+    font-size: 3rem;
+  }
+  section .main-title h2 .bg-text {
+    font-size: 3.5rem;
+  }
+  .theme-btn {
+    width: 3rem;
+    height: 3rem;
+    top: 1.5%;
+    right: 3%;
   }
 }
 
@@ -1374,10 +1405,6 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-  .theme-btn {
-    width: 40px;
-    height: 40px;
-  }
   .header-content {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
@@ -1515,7 +1542,6 @@ section {
             flex-direction: column;
   }
   main .sec5 .contact-container .contact-content-con .right-contact {
-    background-color: #e40145;
     margin-left: 0;
     margin-top: 2.5rem;
     margin-bottom: 6rem;
@@ -1530,6 +1556,9 @@ section {
     margin-left: 0;
     margin-top: 1.5rem;
   }
+  main .sec5 .contact-container .contact-content-con .left-contact {
+    padding: 0 .8rem 0 0;
+  }
   main .sec5 .contact-container .contact-content-con .left-contact .contact-info .contact-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1540,6 +1569,7 @@ section {
   main .sec5 .contact-container .contact-content-con .left-contact .contact-info .contact-item p {
     font-size: 15px;
     color: var(--color-grey-2);
+    word-break: break-word;
   }
   main .sec5 .contact-container .contact-content-con .left-contact .contact-info .contact-item span {
     font-size: 15px;

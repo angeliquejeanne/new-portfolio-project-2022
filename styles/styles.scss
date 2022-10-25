@@ -9,7 +9,7 @@
 :root {
     --color-primary: #000103;
     --color-secondary: #f6b05f;
-    --color-secondary-bis: rgba(246, 176, 95, .5);
+    --color-secondary-bis: rgba(246, 176, 95, .4);
     --color-reverse: #fff;
     --color-white: #FFFFFF;
     --color-black: #000;
@@ -29,7 +29,7 @@
 .light-mode {
     --color-primary: #FFFFFF;
     --color-secondary: #e40145;
-    --color-secondary-bis: rgba(228, 1, 69, .5);
+    --color-secondary-bis: rgba(228, 1, 69, .4);
     --color-reverse: #000;
     --color-white: #454e56;
     --color-black: #000;
@@ -126,6 +126,7 @@ section {
 .sec2 {
     display: none;
     transform: translateY(0) scale(1);
+    margin: 2rem auto;
 }
 
 .sec3 {
@@ -333,6 +334,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 3.5rem;
     padding-bottom: 5rem;
+    margin: 2rem auto;
 
     .right-about {
         display: grid;
@@ -340,26 +342,25 @@ section {
         grid-gap: 2rem;
 
         .about-item {
-            border: 1px solid var(--color-grey-5);
+            border: 3px solid var(--color-grey-1);
             border-radius: 5px;
             transition: all .4s ease-in-out;
             box-shadow: 1px 2px 15px rgba(0,0,0,.1);
 
-            &:hover {
-                cursor: default;
+            &:hover, &:focus, &:active {
                 transform: translateY(-5px);
-                border: 1px solid var(--color-secondary);
+                border: 3px solid var(--color-secondary);
                 box-shadow: 1px 4px 15px rgba(0,0,0,.32);
-            }
-
-            &:focus {
-                outline: 1px solid var(--color-secondary);
             }
 
             .abt-text {
                 padding: 1.5rem;
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
+                
+                position: relative;
+                min-height: auto;
+                width: 100%;
 
                 .large-text {
                     font-size: 3rem;
@@ -375,17 +376,17 @@ section {
                     color: var(--color-grey-1);
                     letter-spacing: 2px;
 
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        top: 15px;
-                        width: 2rem;
-                        height: 2px;
-                        background-color: var(--color-grey-5);
-                    }
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     left: 0;
+                    //     top: 15px;
+                    //     width: 2rem;
+                    //     height: 2px;
+                    //     background-color: var(--color-grey-5);
+                    // }
                 }
-            }
+            }            
         }
     }
 
@@ -398,9 +399,28 @@ section {
             color: var(--color-grey-1);
         }
 
-        h4 {
-            font-size: 2rem;
+        h3 {
+            font-size: 2.5rem;
             text-transform: uppercase;
+        }
+
+        .btn-con {
+            display: flex;
+            align-self: flex-start;
+        
+            .main-btn {
+                background-color: var(--color-icon);
+                outline: 2px solid var(--color-icon);
+                
+                .text {
+                    padding: 0 1rem;
+                }
+                &:active, &:focus, &:hover {
+                    outline: 2px solid var(--color-secondary);
+                    background-color: var(--color-secondary);
+                    color: var(--color-icon);
+                }               
+            }
         }
     }
 }
@@ -828,8 +848,9 @@ section {
                 margin: 0 .4rem;
                 transition: all .4s ease-in-out;
 
-                &:hover {
+                &:hover, &:active, &:focus {
                     background-color: var(--color-secondary);
+                    outline: 2px solid var(--color-secondary);
                     i {
                         color: var(--color-primary);
                     }
@@ -859,20 +880,26 @@ section {
             }
             input, textarea {
                 border-radius: 30px;
-                font-weight: inherit;
+                font-weight: 600;
                 font-size: inherit;
                 font-family: inherit;
                 padding: .8rem 1.1rem;
                 outline: none;
-                border: none;
+                border: 2px solid var(--color-secondary);
                 background-color: var(--color-secondary-bis);
                 width: 90%;
                 resize: none;
                 margin: 1rem 0;
                 &::placeholder {
-                    color: var(--color-primary);
-                    font-weight: 600;
+                    color: var(--color-black);
+                    font-weight: 700;
                 }
+                &:active, &:focus, &:hover {
+                    outline: 2px solid var(--color-secondary);
+                    // background-color: var(--color-secondary);
+                    color: var(--color-icon);
+                }
+                
             }
         }
         .i-c-2{
@@ -1068,10 +1095,27 @@ section {
 
 // MEDIA QUERIES
 
-@media screen and (maw-width: 450px) {
+@media screen and (max-width: 450px) {
     .left-header {
         display: none;
     }
+    section {
+        .main-title {
+            h2 {
+                font-size: 3rem;
+                .bg-text {
+                    font-size: 3.5rem;
+                }
+            } 
+        }
+    }
+    .theme-btn {
+        width: 3rem;
+        height: 3rem;
+        top: 1.5%;
+        right: 3%;
+    }
+    
 }
 @media screen and (max-width:660px) {
     .blogs {
@@ -1107,11 +1151,6 @@ section {
     }
 }
 @media screen and (max-width: 768px) {
-    .theme-btn {
-        width: 40px;
-        height: 40px;
-    }
-
     .header-content {
         grid-template-columns: repeat(1, 1fr);
         padding-bottom: 6rem;
@@ -1278,7 +1317,7 @@ section {
                     flex-direction: column;
 
                     .right-contact {
-                        background-color: #e40145;
+                        // background-color: #e40145;
                         margin-left: 0;
                         margin-top: 2.5rem;
                         margin-bottom: 6rem;
@@ -1292,6 +1331,7 @@ section {
                         }
                     }
                     .left-contact {
+                        padding: 0 .8rem 0 0;
                         .contact-info {
                             .contact-item {
                                 flex-direction: column;
@@ -1300,6 +1340,7 @@ section {
                                 p {
                                     font-size: 15px;
                                     color: var(--color-grey-2);
+                                    word-break: break-word;
                                 }
                                 span {
                                     font-size: 15px;
