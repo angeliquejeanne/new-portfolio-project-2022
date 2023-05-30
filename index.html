@@ -8,52 +8,48 @@
     <meta name="description" content="Située dans les Hauts-de-France, je suis intégratrice web et web designer voici mon cv site & portfolio 
     vous y trouverez les détails de mes expériences et projets.">
 
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" referrerpolicy="no-referrer">
 
 </head>
 <body class="main-content">
 
     <nav class="controlls" role="navigation" aria-label="navigation principale">
-
         <ul>
             <li>
-                <button class="control  control-1 active-btn" data-id="home" title="Accueil">
+                <button class="control  control-1 active-btn" data-id="home" title="Accueil du portfolio">
                     <i class="fas fa-home" aria-hidden="true"></i>
-                    <span class="sr-only">Accueil</span>
+                    <span class="sr-only">Accueil du portfolio</span>
                 </button>
             </li>
             <li>
-                <button class="control control-2" data-id="about">
+                <button class="control control-2" data-id="about" title="Mon parcours">
                     <i class="fas fa-user" aria-hidden="true"></i>
                     <span class="sr-only">Mon parcours</span>
                 </button>
             </li>
             <li>
-                <button class="control control-3" data-id="portfolio">
+                <button class="control control-3" data-id="portfolio" title="Portfolio">
                     <i class="fas fa-briefcase" aria-hidden="true"></i>
                     <span class="sr-only">Portfolio</span>
                 </button>
             </li>
             <li>
-                <button class="control control-4" data-id="blog">
+                <button class="control control-4" data-id="blog" title="Partie blog">
                     <i class="far fa-newspaper" aria-hidden="true"></i>
-                    <span class="sr-only">Blogs</span>
+                    <span class="sr-only">Partie blog</span>
                 </button>
             </li>
             <li>
-                <button class="control control-5" data-id="contact">
+                <button class="control control-5" data-id="contact" title="Me contacter">
                     <i class="fas fa-envelope-open" aria-hidden="true"></i>
-                    <span class="sr-only">Contact</span>
+                    <span class="sr-only">Me contacter</span>
                 </button>
             </li>
             
         </ul>
-
-
     </nav>
  
     <header class="section sec1 header active" id="home" role="banner">
@@ -63,31 +59,29 @@
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <img src="./img/photo-1515138692129-197a2c608cfd.avif" aria-hidden="true" alt="">
+                    <img src="./src/img/portrait.avif" aria-hidden="true" alt="">
                 </div>
             </div>
 
             <div class="right-header">
                 <h1 class="name">
-                    Salut, moi c'est <span class="title-h1">Angélique S.</span><br>
+                    Salut, moi c'est <span class="title-h1">Angélique S.</span>
+                    <br>
                     Je suis <span class="title-h1">Consultante - Intégratrice Web</span>
                 </h1>
-                <!-- <h1 class="name">
-                    Salut, moi c'est <span>Jane Doe</span><br>
-                    Je suis Consultante Web
-                </h1> -->
+
                 <p class="intro">
                     En tant qu'<strong>intégratrice web</strong>, j'aime donner vie aux <strong>maquettes</strong> voir leurs évolutions, 
                     leurs rendues, leurs <strong>adaptations à toutes tailles d'écrans</strong>. J'aime qu'il n'y est pas deux fois la même chose à faire.
                     J'adore également réaliser des <strong>animations et effets</strong>. 
                     Ma seconde passion est le <strong>web design</strong> la partie <strong>User Interface (UI)</strong> plus précisément.
                 </p>
-                <div class="btn-con">
+                <div class="btn-container">
                     <button 
                     class="main-btn" 
                     type="submit" 
                     onclick="window.open('docs/icimoncv.pdf')">
-                        <span class="text">Télécharger mon CV</span>
+                        <span class="btn-txt">Télécharger mon CV</span>
                         <span class="btn-icon" aria-hidden="true">
                             <i class="fas fa-download"></i>
                         </span>
@@ -105,7 +99,7 @@
 
     
     <main>
-        <section class="section sec2 about" id="about">
+        <!-- <section class="section sec2 about" id="about">
             <div class="main-title">
                 <h2>qui est-<span>elle ??</span><span class="bg-text">Quelques chiffres</span></h2>
             </div>
@@ -143,36 +137,36 @@
 
                     <div class="about-item">
                         <section class="abt-text">
-                            <h4 class="small-text">Projets <br /> Completer</h4>
-                            <p class="large-text">20+</p>
+                            <h4 class="small-text">Projets Completer</h4>
+                            <p class="large-text">20<span class="hide" aria-hidden="true">+</span><span class="sr-only">plus</span></p>
                         </section>
                     </div>
 
                     <div class="about-item">
                         <div class="abt-text">
-                            <h4 class="small-text">Années d' <br /> expérience</h4>
-                            <p class="large-text">4+</p>
+                            <h4 class="small-text">Années d'expérience</h4>
+                            <p class="large-text">4<span class="hide" aria-hidden="true">+</span><span class="sr-only">plus</span></p>
                         </div>
                     </div>
 
                     <div class="about-item">
                         <div class="abt-text">
-                            <h4 class="small-text">Clients <br /> contents</h4>
-                            <p class="large-text">5+</p>
+                            <h4 class="small-text">Clients contents</h4>
+                            <p class="large-text">5<span class="hide" aria-hidden="true">+</span><span class="sr-only">plus</span></p>
                         </div>
                     </div>
 
                     <div class="about-item">
                         <div class="abt-text">
-                            <h4 class="small-text">Avis <br /> clients</h4>
-                            <p class="large-text">5+</p>
+                            <h4 class="small-text">Avis clients</h4>
+                            <p class="large-text">5<span class="hide" aria-hidden="true">+</span><span class="sr-only">plus</span></p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- <section class="about-stats">
+            <section class="about-stats">
                 <h3 class="stat-title">My Skills</h3>
                 <div class="progress-bars">
                     <div class="progress-bar">
@@ -266,11 +260,11 @@
                     </div>
 
                 </div>
-            </section> -->
+            </section>
 
-            <!-- <h3 class="stat-title">My Timeline</h3> -->
+            <h3 class="stat-title">My Timeline</h3>
 
-            <!-- <div class="timeline">
+            <div class="timeline">
                 <div class="timeline-item">
                     <div class="tl-icon">
                         <i class="fas fa-briefcase"></i>
@@ -405,8 +399,9 @@
                         </div>
                     </article>
                 </div>
-            </div> -->
-        </section>
+            </div>
+
+        </section> -->
 
         <!-- <section class="section sec3" id="portfolio">
             <div class="main-title">
@@ -871,12 +866,12 @@
                                 <textarea name="comments" id="message" cols="15" rows="8" placeholder="Votre message ici..."></textarea>
                             </div>
 
-                            <div class="btn-con">
+                            <div class="btn-container">
                                 <button 
                                 type="submit" 
                                 value="Envoyer" 
                                 class="main-btn submit-btn-form">
-                                    <span class="text">Envoyez votre demande</span>
+                                    <span class="text btn-txt">Envoyez votre demande</span>
                                     <span class="btn-icon">
                                         <i class="fas fa-paper-plane"></i>
                                     </span>
@@ -885,22 +880,17 @@
                             
                             <input type="hidden" name="_next" value="https://web-i.org/">
 
-                            <div class="btn-con">
+                            <div class="btn-container">
                                 <button 
                                 class="main-btn" 
                                 type="submit" 
                                 onclick="window.open('docs/icimoncv.pdf')">
-                                    <span class="text">Télécharger mon CV</span>
+                                    <span class="text btn-txt">Télécharger mon CV</span>
                                     <span class="btn-icon" aria-hidden="true">
                                         <i class="fas fa-download"></i>
                                     </span>
                                 </button>
-                                <!-- <a href="./docs/CV-Angelique.pdf" class="main-btn">
-                                    <span class="btn-text">Télécharger mon CV</span>
-                                    <span class="btn-icon" aria-hidden="true">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                </a> -->
+                                
                             </div>
                         </form>
                     </div>
@@ -917,7 +907,7 @@
 
     
 
-    <script src="./script/app.js"></script>
-    <script src="./script/modale.js"></script>
+    <script src="./src/script/app.js"></script>
+    <script src="./src/script/modale.js"></script>
 </body>
 </html>
